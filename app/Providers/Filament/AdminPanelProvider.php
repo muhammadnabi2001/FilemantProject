@@ -3,6 +3,7 @@
 namespace App\Providers\Filament;
 
 use Asmit\ResizedColumn\ResizedColumnPlugin;
+use Filament\Actions\Action;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -32,6 +33,19 @@ class AdminPanelProvider extends PanelProvider
             ->colors([
                 'primary' => Color::Amber,
             ])
+            ->brandLogo(asset('Logo/toj.jpg'))
+            ->brandLogoHeight('2rem')
+            ->sidebarFullyCollapsibleOnDesktop()
+            ->userMenuItems([
+                Action::make('posts')
+                    ->label('Roles')
+                    ->icon('heroicon-o-cog-6-tooth')
+                    ->url('/admin/roles')
+            ])
+            ->navigationGroups([
+                'Content',
+                'Settings',
+            ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
             ->pages([
@@ -57,9 +71,10 @@ class AdminPanelProvider extends PanelProvider
                 Authenticate::class,
             ])
             ->plugins([
-                // ... other plugins
                 ResizedColumnPlugin::make()
-                    ->preserveOnDB(true) // Enable database storage (optional)
-            ]);;
+                    ->preserveOnDB(true)
+            ])
+            ->databaseNotifications()
+            ->databaseNotificationsPolling('30s');
     }
 }

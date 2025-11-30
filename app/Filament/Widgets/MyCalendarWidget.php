@@ -2,8 +2,10 @@
 
 namespace App\Filament\Widgets;
 
-use App\Models\User;
-use Guava\Calendar\Enums\CalendarViewType;
+use App\Models\MyEvent;
+use Filament\Actions\CreateAction;
+use Filament\Forms\Components\DateTimePicker;
+use Filament\Forms\Components\TextInput;
 // use Filament\Widgets\Widget;
 use Guava\Calendar\Filament\CalendarWidget;
 use Guava\Calendar\ValueObjects\CalendarEvent;
@@ -13,13 +15,33 @@ use Illuminate\Support\Collection;
 class MyCalendarWidget extends CalendarWidget
 {
     // protected CalendarViewType $calendarView = CalendarViewType::ResourceTimeGridWeek;
-    protected function getEvents(FetchInfo $info): Collection|array
+    public function getHeaderActions(): array
     {
         return [
-            CalendarEvent::make()
-                ->title('My first calendar')
-                ->start(today())
-                ->end(today()),
+            CreateAction::make()
+            ->label('Create Event')
+            ->modal(true)
+            ->model(MyEvent::class)
+            ->schema([
+                TextInput::make('title')
+                ->required(),
+                DateTimePicker::make('start')
+                ->required(),
+                DateTimePicker::make('end')
+                ->required(),
+            ])
+            ->action(function(array $data){
+                MyEvent::create([
+                    'title'=>$data['title'],
+                    'start'=>$data['start'],
+                    'end'=>$data['end'],
+                ]);
+                $this->refreshRecords();
+            })
         ];
+    }
+    protected function getEvents(FetchInfo $info): Collection|array
+    {
+        return MyEvent::get();
     }
 }

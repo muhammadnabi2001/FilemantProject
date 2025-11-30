@@ -96,6 +96,7 @@ class AdminPanelProvider extends PanelProvider
                 )->themeToggle() // Default: TopRight
                     ->themeToggle(ThemePosition::BottomLeft),
                 FilamentUiSwitcherPlugin::make()
+                    ->withModeSwitcher()
             ])
             ->databaseNotifications()
             ->databaseNotificationsPolling('30s')

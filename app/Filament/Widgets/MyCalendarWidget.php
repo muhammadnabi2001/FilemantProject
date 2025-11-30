@@ -39,8 +39,6 @@ class MyCalendarWidget extends CalendarWidget
         ];
     }
 
-
-
     protected function getDateClickContextMenuActions(): array
     {
         return [

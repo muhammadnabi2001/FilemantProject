@@ -7,6 +7,7 @@ use Filament\Actions\CreateAction;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\TextInput;
 use Guava\Calendar\Enums\CalendarViewType;
+use Guava\Calendar\Filament\Actions\DeleteAction;
 use Guava\Calendar\Filament\Actions\EditAction;
 use Guava\Calendar\Filament\Actions\ViewAction;
 use Guava\Calendar\Filament\CalendarWidget;
@@ -20,7 +21,7 @@ class MyCalendarWidget extends CalendarWidget
 
     // protected CalendarViewType $calendarView = CalendarViewType::ResourceTimeGridWeek;
 
-    protected CalendarViewType $calendarView = CalendarViewType::DayGridMonth;
+    // protected CalendarViewType $calendarView = CalendarViewType::DayGridMonth;
 
     protected bool $dayMaxEvents = true;
 
@@ -34,7 +35,7 @@ class MyCalendarWidget extends CalendarWidget
         return [
             $this->viewAction(),
             $this->editAction(),
-            // $this->deleteAction(),
+            $this->deleteAction(),
         ];
     }
 
@@ -61,6 +62,7 @@ class MyCalendarWidget extends CalendarWidget
                 ->after(fn() => $this->refreshRecords())
         ];
     }
+    
     public function editAction(): EditAction
     {
         return EditAction::make('edit')
@@ -118,6 +120,10 @@ class MyCalendarWidget extends CalendarWidget
                     $this->refreshRecords();
                 })
         ];
+    }
+    public function deleteAction(): DeleteAction
+    {
+        return parent::deleteAction();
     }
     protected function getEvents(FetchInfo $info): Collection|array
     {

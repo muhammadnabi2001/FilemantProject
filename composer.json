@@ -8,6 +8,8 @@
     "require": {
         "php": "^8.2",
         "asmit/resized-column": "^1.1",
+        "craft-forge/filament-language-switcher": "^1.0",
+        "dotswan/filament-map-picker": "^2.1",
         "filament/filament": "4.0",
         "flowframe/laravel-trend": "^0.4.0",
         "laravel/framework": "^12.0",

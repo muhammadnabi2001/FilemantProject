@@ -21,7 +21,17 @@ class UserResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::UserGroup;
 
-    protected static string | UnitEnum | null $navigationGroup = 'Settings';
+    // protected static string | UnitEnum | null $navigationGroup = 'Settings';
+
+    public static function getNavigationGroup(): ?string
+    {
+        return __('messages.settings');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('messages.users');
+    }
 
     protected static ?int $navigationSort = 1;
 

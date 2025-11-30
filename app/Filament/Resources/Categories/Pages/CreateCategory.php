@@ -20,4 +20,8 @@ class CreateCategory extends CreateRecord
             ->sendToDatabase(Auth::user())
             ;
     }
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
 }

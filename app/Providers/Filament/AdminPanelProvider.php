@@ -3,6 +3,7 @@
 namespace App\Providers\Filament;
 
 use Asmit\ResizedColumn\ResizedColumnPlugin;
+use CraftForge\FilamentLanguageSwitcher\FilamentLanguageSwitcherPlugin;
 use Filament\Actions\Action;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
@@ -12,6 +13,7 @@ use Filament\Pages\Dashboard;
 use Filament\Panel;
 use Filament\PanelProvider;
 use Filament\Support\Colors\Color;
+use Filament\View\PanelsRenderHook;
 use Filament\Widgets\AccountWidget;
 use Filament\Widgets\FilamentInfoWidget;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
@@ -33,7 +35,8 @@ class AdminPanelProvider extends PanelProvider
             ->colors([
                 'primary' => Color::Amber,
             ])
-            ->brandLogo(asset('Logo/toj.jpg'))
+            ->brandName(fn () => __('messages.admin_panel'))
+            // ->brandLogo(asset('Logo/toj.jpg'))
             ->brandLogoHeight('2rem')
             ->sidebarFullyCollapsibleOnDesktop()
             ->userMenuItems([
@@ -72,7 +75,13 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->plugins([
                 ResizedColumnPlugin::make()
-                    ->preserveOnDB(true)
+                    ->preserveOnDB(true),
+                FilamentLanguageSwitcherPlugin::make()->locales([
+                    ['code' => 'en', 'name' => 'English', 'flag' => 'gb'],
+                    ['code' => 'uz', 'name' => 'O‘zbek', 'flag' => 'uz'],
+                    ['code' => 'ru', 'name' => 'Русский', 'flag' => 'ru'],
+                ])
+                // ->renderHook(PanelsRenderHook::USER_MENU_PROFILE_AFTER),
             ])
             ->databaseNotifications()
             ->databaseNotificationsPolling('30s');

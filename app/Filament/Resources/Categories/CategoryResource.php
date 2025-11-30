@@ -23,7 +23,17 @@ class CategoryResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::Tag;
 
-    protected static string | UnitEnum | null $navigationGroup = 'Content';
+    // protected static string | UnitEnum | null $navigationGroup = 'Content';
+
+    public static function getNavigationGroup(): ?string
+    {
+        return __('messages.content');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('messages.categories');
+    }
 
     public static function form(Schema $schema): Schema
     {

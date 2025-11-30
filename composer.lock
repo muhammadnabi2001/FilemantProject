@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6a9579c5c5bbc24b86b58bc3ef9377d1",
+    "content-hash": "640034077bdcc05cc6e0d457c4167f3f",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -397,6 +397,80 @@
                 }
             ],
             "time": "2024-02-09T16:56:22+00:00"
+        },
+        {
+            "name": "caresome/filament-auth-designer",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/caresome/filament-auth-designer.git",
+                "reference": "8133757020f778db7e54dc56769bc994603a17f8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/caresome/filament-auth-designer/zipball/8133757020f778db7e54dc56769bc994603a17f8",
+                "reference": "8133757020f778db7e54dc56769bc994603a17f8",
+                "shasum": ""
+            },
+            "require": {
+                "filament/filament": "^4.0",
+                "illuminate/contracts": "^11.0||^12.0",
+                "php": "^8.2|^8.3|^8.4",
+                "spatie/laravel-package-tools": "^1.16"
+            },
+            "require-dev": {
+                "larastan/larastan": "^3.0",
+                "laravel/pint": "^1.14",
+                "nunomaduro/collision": "^8.8",
+                "orchestra/testbench": "^10.0.0||^9.0.0",
+                "pestphp/pest": "^4.0",
+                "pestphp/pest-plugin-arch": "^4.0",
+                "pestphp/pest-plugin-laravel": "^4.0",
+                "phpstan/extension-installer": "^1.4",
+                "phpstan/phpstan-deprecation-rules": "^2.0",
+                "phpstan/phpstan-phpunit": "^2.0",
+                "spatie/laravel-ray": "^1.35"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Caresome\\FilamentAuthDesigner\\AuthDesignerServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Caresome\\FilamentAuthDesigner\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Caresome",
+                    "email": "dev@caresome.app",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Transform Filament's default auth pages into stunning, brand-ready experiences",
+            "homepage": "https://github.com/caresome/filament-auth-designer",
+            "keywords": [
+                "Authentication",
+                "auth-designer",
+                "auth-pages",
+                "caresome",
+                "filament",
+                "filament-plugin",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/caresome/filament-auth-designer/issues",
+                "source": "https://github.com/caresome/filament-auth-designer/tree/v1.0.0"
+            },
+            "time": "2025-10-12T09:55:29+00:00"
         },
         {
             "name": "chillerlan/php-qrcode",
@@ -1174,16 +1248,16 @@
         },
         {
             "name": "filament/actions",
-            "version": "v4.0.0",
+            "version": "v4.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/actions.git",
-                "reference": "8b8eef43e31f86681d7c8f1a8d8400afa9172442"
+                "reference": "43a0012caaca601e1cb3536d354a586ef8c3f318"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/actions/zipball/8b8eef43e31f86681d7c8f1a8d8400afa9172442",
-                "reference": "8b8eef43e31f86681d7c8f1a8d8400afa9172442",
+                "url": "https://api.github.com/repos/filamentphp/actions/zipball/43a0012caaca601e1cb3536d354a586ef8c3f318",
+                "reference": "43a0012caaca601e1cb3536d354a586ef8c3f318",
                 "shasum": ""
             },
             "require": {
@@ -1192,7 +1266,7 @@
                 "filament/infolists": "self.version",
                 "filament/notifications": "self.version",
                 "filament/support": "self.version",
-                "league/csv": "^9.16",
+                "league/csv": "^9.27",
                 "openspout/openspout": "^4.23",
                 "php": "^8.2"
             },
@@ -1219,20 +1293,20 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2025-08-11T19:29:26+00:00"
+            "time": "2025-11-28T11:21:07+00:00"
         },
         {
             "name": "filament/filament",
-            "version": "v4.0.0",
+            "version": "v4.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/panels.git",
-                "reference": "dc8306c984d0d52b0b8365b5e66bb7c43b81784b"
+                "reference": "b9a65067099683dfaace04043dfb8c5a50c19bfe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/panels/zipball/dc8306c984d0d52b0b8365b5e66bb7c43b81784b",
-                "reference": "dc8306c984d0d52b0b8365b5e66bb7c43b81784b",
+                "url": "https://api.github.com/repos/filamentphp/panels/zipball/b9a65067099683dfaace04043dfb8c5a50c19bfe",
+                "reference": "b9a65067099683dfaace04043dfb8c5a50c19bfe",
                 "shasum": ""
             },
             "require": {
@@ -1246,7 +1320,7 @@
                 "filament/tables": "self.version",
                 "filament/widgets": "self.version",
                 "php": "^8.2",
-                "pragmarx/google2fa": "^8.0",
+                "pragmarx/google2fa": "^8.0|^9.0",
                 "pragmarx/google2fa-qrcode": "^3.0"
             },
             "type": "library",
@@ -1276,20 +1350,20 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2025-08-11T19:28:59+00:00"
+            "time": "2025-11-28T11:21:48+00:00"
         },
         {
             "name": "filament/forms",
-            "version": "v4.0.0",
+            "version": "v4.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/forms.git",
-                "reference": "cb06cbd7855a178fd9c1db88ad5f3ecad7d993a1"
+                "reference": "4772a165a16cb9ea5da346fc3ba0ffca5b47a53b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/forms/zipball/cb06cbd7855a178fd9c1db88ad5f3ecad7d993a1",
-                "reference": "cb06cbd7855a178fd9c1db88ad5f3ecad7d993a1",
+                "url": "https://api.github.com/repos/filamentphp/forms/zipball/4772a165a16cb9ea5da346fc3ba0ffca5b47a53b",
+                "reference": "4772a165a16cb9ea5da346fc3ba0ffca5b47a53b",
                 "shasum": ""
             },
             "require": {
@@ -1326,20 +1400,20 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2025-08-11T19:29:11+00:00"
+            "time": "2025-11-28T11:21:32+00:00"
         },
         {
             "name": "filament/infolists",
-            "version": "v4.0.0",
+            "version": "v4.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/infolists.git",
-                "reference": "43acef5a76da2b6dd05ee480caaca9d3ba4edcd1"
+                "reference": "0a85cf19262610d607d873644d4fb33e620fe126"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/infolists/zipball/43acef5a76da2b6dd05ee480caaca9d3ba4edcd1",
-                "reference": "43acef5a76da2b6dd05ee480caaca9d3ba4edcd1",
+                "url": "https://api.github.com/repos/filamentphp/infolists/zipball/0a85cf19262610d607d873644d4fb33e620fe126",
+                "reference": "0a85cf19262610d607d873644d4fb33e620fe126",
                 "shasum": ""
             },
             "require": {
@@ -1371,20 +1445,20 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2025-08-12T13:17:14+00:00"
+            "time": "2025-11-28T11:18:41+00:00"
         },
         {
             "name": "filament/notifications",
-            "version": "v4.0.0",
+            "version": "v4.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/notifications.git",
-                "reference": "9b9022c6f682755317092b289a61928348310737"
+                "reference": "f8657e9b98f549f316daf74cf24a659b85a10e12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/notifications/zipball/9b9022c6f682755317092b289a61928348310737",
-                "reference": "9b9022c6f682755317092b289a61928348310737",
+                "url": "https://api.github.com/repos/filamentphp/notifications/zipball/f8657e9b98f549f316daf74cf24a659b85a10e12",
+                "reference": "f8657e9b98f549f316daf74cf24a659b85a10e12",
                 "shasum": ""
             },
             "require": {
@@ -1418,20 +1492,66 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2025-07-16T13:41:20+00:00"
+            "time": "2025-11-28T11:21:34+00:00"
         },
         {
-            "name": "filament/schemas",
-            "version": "v4.0.0",
+            "name": "filament/query-builder",
+            "version": "v4.2.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/filamentphp/schemas.git",
-                "reference": "407e656aab02840781161648ea4a3f4c96de6570"
+                "url": "https://github.com/filamentphp/query-builder.git",
+                "reference": "82aa18f09039d015a1d1b9a1b8efb9625fe42129"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/schemas/zipball/407e656aab02840781161648ea4a3f4c96de6570",
-                "reference": "407e656aab02840781161648ea4a3f4c96de6570",
+                "url": "https://api.github.com/repos/filamentphp/query-builder/zipball/82aa18f09039d015a1d1b9a1b8efb9625fe42129",
+                "reference": "82aa18f09039d015a1d1b9a1b8efb9625fe42129",
+                "shasum": ""
+            },
+            "require": {
+                "filament/actions": "self.version",
+                "filament/forms": "self.version",
+                "filament/schemas": "self.version",
+                "filament/support": "self.version",
+                "php": "^8.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Filament\\QueryBuilder\\QueryBuilderServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Filament\\QueryBuilder\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A powerful query builder component for Filament.",
+            "homepage": "https://github.com/filamentphp/filament",
+            "support": {
+                "issues": "https://github.com/filamentphp/filament/issues",
+                "source": "https://github.com/filamentphp/filament"
+            },
+            "time": "2025-11-28T11:19:23+00:00"
+        },
+        {
+            "name": "filament/schemas",
+            "version": "v4.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/filamentphp/schemas.git",
+                "reference": "79fa31a8f691f542471a603e754f941f7d9ad09d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/filamentphp/schemas/zipball/79fa31a8f691f542471a603e754f941f7d9ad09d",
+                "reference": "79fa31a8f691f542471a603e754f941f7d9ad09d",
                 "shasum": ""
             },
             "require": {
@@ -1463,20 +1583,20 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2025-08-11T19:28:52+00:00"
+            "time": "2025-11-28T11:21:50+00:00"
         },
         {
             "name": "filament/support",
-            "version": "v4.0.0",
+            "version": "v4.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/support.git",
-                "reference": "1c6ed2b3697600f5213bee6760e0f709a746a968"
+                "reference": "50d19b69fecc0636485c0329b9bd35136066ef8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/support/zipball/1c6ed2b3697600f5213bee6760e0f709a746a968",
-                "reference": "1c6ed2b3697600f5213bee6760e0f709a746a968",
+                "url": "https://api.github.com/repos/filamentphp/support/zipball/50d19b69fecc0636485c0329b9bd35136066ef8c",
+                "reference": "50d19b69fecc0636485c0329b9bd35136066ef8c",
                 "shasum": ""
             },
             "require": {
@@ -1521,25 +1641,26 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2025-08-10T20:27:33+00:00"
+            "time": "2025-11-28T11:20:04+00:00"
         },
         {
             "name": "filament/tables",
-            "version": "v4.0.0",
+            "version": "v4.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/tables.git",
-                "reference": "55b96c365ec5d50dcadb996515557ced08ce7b27"
+                "reference": "7408f290bda5e908fbe010ba20ab59a01e7e932f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/tables/zipball/55b96c365ec5d50dcadb996515557ced08ce7b27",
-                "reference": "55b96c365ec5d50dcadb996515557ced08ce7b27",
+                "url": "https://api.github.com/repos/filamentphp/tables/zipball/7408f290bda5e908fbe010ba20ab59a01e7e932f",
+                "reference": "7408f290bda5e908fbe010ba20ab59a01e7e932f",
                 "shasum": ""
             },
             "require": {
                 "filament/actions": "self.version",
                 "filament/forms": "self.version",
+                "filament/query-builder": "self.version",
                 "filament/support": "self.version",
                 "php": "^8.2"
             },
@@ -1566,20 +1687,20 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2025-08-12T13:17:20+00:00"
+            "time": "2025-11-28T11:20:04+00:00"
         },
         {
             "name": "filament/widgets",
-            "version": "v4.0.0",
+            "version": "v4.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/widgets.git",
-                "reference": "ec65855e6b572900eefbb514608fb2ce92abb8d0"
+                "reference": "495409437dfcd524313dcd6d605b97298fc487b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/widgets/zipball/ec65855e6b572900eefbb514608fb2ce92abb8d0",
-                "reference": "ec65855e6b572900eefbb514608fb2ce92abb8d0",
+                "url": "https://api.github.com/repos/filamentphp/widgets/zipball/495409437dfcd524313dcd6d605b97298fc487b2",
+                "reference": "495409437dfcd524313dcd6d605b97298fc487b2",
                 "shasum": ""
             },
             "require": {
@@ -1610,7 +1731,7 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2025-08-10T20:27:56+00:00"
+            "time": "2025-11-28T11:22:05+00:00"
         },
         {
             "name": "flowframe/laravel-trend",
@@ -4394,16 +4515,16 @@
         },
         {
             "name": "pragmarx/google2fa",
-            "version": "v8.0.3",
+            "version": "v9.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/antonioribeiro/google2fa.git",
-                "reference": "6f8d87ebd5afbf7790bde1ffc7579c7c705e0fad"
+                "reference": "e6bc62dd6ae83acc475f57912e27466019a1f2cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antonioribeiro/google2fa/zipball/6f8d87ebd5afbf7790bde1ffc7579c7c705e0fad",
-                "reference": "6f8d87ebd5afbf7790bde1ffc7579c7c705e0fad",
+                "url": "https://api.github.com/repos/antonioribeiro/google2fa/zipball/e6bc62dd6ae83acc475f57912e27466019a1f2cf",
+                "reference": "e6bc62dd6ae83acc475f57912e27466019a1f2cf",
                 "shasum": ""
             },
             "require": {
@@ -4440,27 +4561,27 @@
             ],
             "support": {
                 "issues": "https://github.com/antonioribeiro/google2fa/issues",
-                "source": "https://github.com/antonioribeiro/google2fa/tree/v8.0.3"
+                "source": "https://github.com/antonioribeiro/google2fa/tree/v9.0.0"
             },
-            "time": "2024-09-05T11:56:40+00:00"
+            "time": "2025-09-19T22:51:08+00:00"
         },
         {
             "name": "pragmarx/google2fa-qrcode",
-            "version": "v3.0.1",
+            "version": "v3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/antonioribeiro/google2fa-qrcode.git",
-                "reference": "c23ebcc3a50de0d1566016a6dd1486e183bb78e1"
+                "reference": "ce4d8a729b6c93741c607cfb2217acfffb5bf76b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antonioribeiro/google2fa-qrcode/zipball/c23ebcc3a50de0d1566016a6dd1486e183bb78e1",
-                "reference": "c23ebcc3a50de0d1566016a6dd1486e183bb78e1",
+                "url": "https://api.github.com/repos/antonioribeiro/google2fa-qrcode/zipball/ce4d8a729b6c93741c607cfb2217acfffb5bf76b",
+                "reference": "ce4d8a729b6c93741c607cfb2217acfffb5bf76b",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1",
-                "pragmarx/google2fa": "^4.0|^5.0|^6.0|^7.0|^8.0"
+                "pragmarx/google2fa": ">=4.0"
             },
             "require-dev": {
                 "bacon/bacon-qr-code": "^2.0",
@@ -4507,9 +4628,9 @@
             ],
             "support": {
                 "issues": "https://github.com/antonioribeiro/google2fa-qrcode/issues",
-                "source": "https://github.com/antonioribeiro/google2fa-qrcode/tree/v3.0.1"
+                "source": "https://github.com/antonioribeiro/google2fa-qrcode/tree/v3.0.0"
             },
-            "time": "2025-09-19T23:02:26+00:00"
+            "time": "2021-08-15T12:53:48+00:00"
         },
         {
             "name": "psr/clock",

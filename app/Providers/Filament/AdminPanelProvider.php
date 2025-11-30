@@ -2,7 +2,12 @@
 
 namespace App\Providers\Filament;
 
+use Andreia\FilamentUiSwitcher\FilamentUiSwitcherPlugin;
 use Asmit\ResizedColumn\ResizedColumnPlugin;
+use Caresome\FilamentAuthDesigner\AuthDesignerPlugin;
+use Caresome\FilamentAuthDesigner\Enums\AuthLayout;
+use Caresome\FilamentAuthDesigner\Enums\MediaDirection;
+use Caresome\FilamentAuthDesigner\Enums\ThemePosition;
 use CraftForge\FilamentLanguageSwitcher\FilamentLanguageSwitcherPlugin;
 use Filament\Actions\Action;
 use Filament\Http\Middleware\Authenticate;
@@ -35,7 +40,7 @@ class AdminPanelProvider extends PanelProvider
             ->colors([
                 'primary' => Color::Amber,
             ])
-            ->brandName(fn () => __('messages.admin_panel'))
+            ->brandName(fn() => __('messages.admin_panel'))
             // ->brandLogo(asset('Logo/toj.jpg'))
             ->brandLogoHeight('2rem')
             ->sidebarFullyCollapsibleOnDesktop()
@@ -80,8 +85,13 @@ class AdminPanelProvider extends PanelProvider
                     ['code' => 'en', 'name' => 'English', 'flag' => 'gb'],
                     ['code' => 'uz', 'name' => 'O‘zbek', 'flag' => 'uz'],
                     ['code' => 'ru', 'name' => 'Русский', 'flag' => 'ru'],
-                ])
-                // ->renderHook(PanelsRenderHook::USER_MENU_PROFILE_AFTER),
+                ]),
+                AuthDesignerPlugin::make()->login(
+                    layout: AuthLayout::Overlay,
+                    media: asset('vedios/mx.mp4'),
+                    direction: MediaDirection::Left,
+                )->themeToggle() // Default: TopRight
+                    ->themeToggle(ThemePosition::BottomLeft),
             ])
             ->databaseNotifications()
             ->databaseNotificationsPolling('30s');

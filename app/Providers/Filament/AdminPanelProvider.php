@@ -3,6 +3,7 @@
 namespace App\Providers\Filament;
 
 use Andreia\FilamentUiSwitcher\FilamentUiSwitcherPlugin;
+use App\Filament\Widgets\MyCalendarWidget;
 use Asmit\ResizedColumn\ResizedColumnPlugin;
 use Caresome\FilamentAuthDesigner\AuthDesignerPlugin;
 use Caresome\FilamentAuthDesigner\Enums\AuthLayout;
@@ -36,6 +37,7 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
+            ->profile()
             ->login()
             ->colors([
                 'primary' => Color::Amber,
@@ -63,6 +65,7 @@ class AdminPanelProvider extends PanelProvider
             ->widgets([
                 AccountWidget::class,
                 FilamentInfoWidget::class,
+                MyCalendarWidget::class
             ])
             ->middleware([
                 EncryptCookies::class,
@@ -92,8 +95,10 @@ class AdminPanelProvider extends PanelProvider
                     direction: MediaDirection::Left,
                 )->themeToggle() // Default: TopRight
                     ->themeToggle(ThemePosition::BottomLeft),
+                FilamentUiSwitcherPlugin::make()
             ])
             ->databaseNotifications()
-            ->databaseNotificationsPolling('30s');
+            ->databaseNotificationsPolling('30s')
+            ->viteTheme('resources/css/filament/admin/theme.css');;
     }
 }
